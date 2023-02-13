@@ -8,6 +8,16 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover" />
   <title>兔了个兔ddd</title>
   <script>
+    (function(){
+      window.alert = function(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+      }
+    })();
     var _hmt = _hmt || [];
     (function () {
       const hm = document.createElement('script')
@@ -16,8 +26,8 @@
       s.parentNode.insertBefore(hm, s)
     })()
   </script>
-  <script type="module" crossorigin src="/assets/index.6927249b.js"></script>
-  <link rel="stylesheet" href="/assets/index.5799f8bc.css">
+  <script type="module" crossorigin src="/assets/index.294ca5e8.js"></script>
+  <link rel="stylesheet" href="/assets/index.c1ff0f66.css">
 </head>
 
 <body>
